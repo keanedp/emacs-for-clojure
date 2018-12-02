@@ -18,7 +18,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 40)
-
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; ido-mode allows you to more easily navigate choices. For example,
 ;; when you want to switch buffers, ido presents you with a list
@@ -60,3 +60,5 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
